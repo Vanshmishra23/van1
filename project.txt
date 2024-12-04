@@ -1,0 +1,18 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    string input;
+    ofstream filedemo("D:/vansh/home.txt");
+    
+    if (filedemo.is_open()) {
+        cout << "Enter text: " << endl;
+        getline(cin, input); 
+        filedemo << input;
+        filedemo.close(); 
+        cout << "Text written to file successfully." << endl; 
+    } else {
+        cout << "Failed to open the file." << endl; 
+    }
+}
